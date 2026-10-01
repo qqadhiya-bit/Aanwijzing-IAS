@@ -941,7 +941,7 @@ function showVideoFallback(){
     document.getElementById('videoFallback').style.display = 'flex';
 }
 // Video tag tidak selalu memicu onerror untuk 404 lokal, jadi cek manual juga
-fetch('intro.mp4', {method:'HEAD'}).then(r=>{ if(!r.ok) showVideoFallback(); }).catch(()=>{ /* dibiarkan */ });
+fetch('https://github.com/qqadhiya-bit/Aanwijzing-IAS/releases/download/v1.0.0/intro.mp4', {method:'HEAD'}).then(r=>{ if(!r.ok) showVideoFallback(); }).catch(()=>{ /* dibiarkan */ });
 
 /* Ambient dimming + transisi zoom smooth ke "layar penuh" pas video diputar.
    Ini BUKAN fullscreen API asli (yang transisinya instan, nggak bisa
